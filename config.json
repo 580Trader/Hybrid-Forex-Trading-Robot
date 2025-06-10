@@ -1,0 +1,40 @@
+{
+    "data_settings": {
+        "d1_csv_path": "../data/splits/GBPUSDm_D1_train.csv", 
+        "h1_csv_path": "../data/splits/GBPUSDm_H1_train.csv", 
+        "datetime_column": "time",
+        "open_column": "open",
+        "high_column": "high",
+        "low_column": "low",
+        "close_column": "close",
+        "volume_column": "tick_volume",
+        "data_timezone": "UTC"
+    },
+    "strategy_parameters": {
+        "d1_sma_period": 50,
+        "h1_atr_period": 14,
+        "h1_rsi_period": 10,
+        "sl_atr_offset_pips": 5,
+        "baseline_tp_rr_ratio": 2.0,
+        "ai_assisted_tp_sl_enabled_default": true
+    },
+    "ml_model_paths": {
+        "kmeans_model_path": "models/kmeans_regime_model.joblib",
+        "lstm_model_path": "models/lstm_trend_confirmer.h5"
+    },
+    "lstm_confidence_tiers": { 
+        "no_trade_threshold": 0.55,
+        "tier1_min_score": 0.55,
+        "tier1_max_score": 0.65,
+        "tier1_rr": 1.5,
+        "tier2_min_score": 0.65,
+        "tier2_max_score": 0.75,
+        "tier2_rr": 2.0,
+        "tier3_min_score": 0.75,
+        "tier3_rr": 3.0
+    },
+    "logging": {
+        "log_file_path": "logs/trading_bot.log",
+        "log_level": "INFO" 
+    }
+}

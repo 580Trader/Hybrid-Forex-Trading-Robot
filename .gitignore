@@ -1,0 +1,32 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment folder
+# This ensures your installed packages aren't uploaded
+forex_bot_env/
+.venv/
+venv/
+env/
+
+# IDE and editor specific folders
+.vscode/
+.idea/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data Files
+# It's good practice to ignore large data files.
+# This will ignore the 'splits' subfolder inside your 'data' folder.
+data/splits/
+data/
+
+# Any output CSVs or logs you might generate during testing
+*.log
+*_signals_output.csv
+
+# Environment variables file (if you create one later)
+.env

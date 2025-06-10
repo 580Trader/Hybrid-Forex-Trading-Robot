@@ -1,32 +1,150 @@
-# Python cache files
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
-# Virtual Environment folder
-# This ensures your installed packages aren't uploaded
-forex_bot_env/
-.venv/
-venv/
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
 env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+forex_bot_env/
 
-# IDE and editor specific folders
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# VS Code
 .vscode/
+
+# PyCharm
 .idea/
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
+# Ruff linter cache
+.ruff_cache/
 
-# Data Files
-# It's good practice to ignore large data files.
-# This will ignore the 'splits' subfolder inside your 'data' folder.
+# PyPI configuration file
+.pypirc
+
+# --- Project-Specific Ignores ---
+
+# Ignore large data files in the 'splits' subfolder of 'data'
 data/splits/
 data/
 
-# Any output CSVs or logs you might generate during testing
+# Ignore any log files
 *.log
-*_signals_output.csv
 
-# Environment variables file (if you create one later)
-.env
+# Ignore specific CSV output files from testing
+*_signals_output.csv
+w_pattern_signals_output.csv

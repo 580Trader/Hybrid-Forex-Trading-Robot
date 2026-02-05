@@ -2,6 +2,7 @@
 
 ## Overview & Goal
 
+Note: This repository represents the public, open-source strategy logic for ZeroCore, my proprietary distributed trading engine. It demonstrates the hybrid algorithmic approach (Rules + ML) without exposing the private execution infrastructure.
 This project details the development of a hybrid Forex trading robot that combines a rules-based trading strategy with machine learning (AI) components. The core strategy is a customized **TRSS (Trend Reversal Structure Strategy)** designed to trade currency pairs like GBPUSD.
 
 The primary goal is to create a more adaptive and robust automated trading system compared to purely rule-based or purely AI-driven approaches. By leveraging the consistency of rules and the pattern-recognition capabilities of AI, this project aims to solve challenges like static rule limitations in dynamic markets and the "black box" nature of some AI systems by creating a structured, yet intelligent, trading logic.
@@ -45,19 +46,13 @@ The following are initial backtest results for the **rules-based engine only** (
 
 *Note: These results do not include commissions or slippage.*
 
-## My Development Process & Collaboration with Gemini
+## Development Methodology: AI-Augmented Engineering
 
-As the project lead, I am now personally driving the full development of the backend logic, AI components, and final system integration. Throughout this process, I have worked closely with Gemini, which has served as an AI coding partner and technical consultant.
+As the lead architect, I leveraged Large Language Models (LLMs) to accelerate the development lifecycle, focusing on high-level architectural logic while automating boilerplate generation.
 
-* **Initial Vision & Architecture:** I established the foundational concept of a hybrid model, combining my trading knowledge of the TRSS strategy with AI enhancements, as outlined in my initial project proposal documents.
-* **Iterative Development with Gemini:**
-    * **Component-by-Component Build:** I've approached the project by breaking it down into manageable modules: data loading, indicators, D1 structure, H1 patterns, signal engine, and risk management.
-    * **Providing Specifications:** For each module, I provided Gemini with specific requirements and detailed rules. This included indicator formulas, D1 swing point criteria, trend logic (my "1-2-3 movement" concept), Break of Structure (BoS) confirmation rules, H1 W/M pattern definitions, and SL/TP calculation rules.
-    * **Code Generation and Adaptation:** Gemini assisted by providing initial Python code structures and function templates. I then integrated this code into my project's `.py` modules and adapted it as needed.
-    * **Intensive Testing & Debugging in Jupyter Notebooks:** This has been a crucial part of my process. For each function, I load data, call functions, rigorously inspect outputs (using Pandas methods and `print` statements), and perform visual verification with Matplotlib against my manual chart analysis.
-    * **Collaborative Troubleshooting:** Through this testing, I identify discrepancies or errors. I then work with Gemini by providing the error messages and context to collaboratively troubleshoot and receive revised code suggestions, which I then test again. This iterative loop has been central to our progress.
-* **Defining AI Component Tasks:** I defined the roles for the K-Means and LSTM models within the hybrid system. I then collaborated with Gemini to create detailed, step-by-step task lists for the AI development phase, which I will now be implementing.
-* **GUI Integration Planning:** I am planning the integration of the backend engine with the **Streamlit GUI framework initially developed by Brilliant Mpofu**. With Gemini's assistance, we've drafted an "Interface Contract" to define how the backend and GUI will communicate, which will guide this integration process.
+* **Architecture First:** I defined the modular constraints (Signal Engine vs. Risk Engine) and data contracts.
+* **Rapid Prototyping:** Used AI to generate initial Python function stubs for standard indicators (RSI, ATR) to speed up implementation.
+* **Rigorous Validation:** All AI-generated logic was subjected to manual code review and backtested against visual chart analysis to ensure mathematical accuracy (e.g., verifying 3-candle pullback logic).
 
 ## Technologies & Tools
 
